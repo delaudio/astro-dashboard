@@ -1,0 +1,33 @@
+---
+import Container from "@components/Container.astro";
+import Layout from "@layouts/Layout.astro";
+import Scatterplot from "@components/react/Scatterplot";
+import StackedAreaChart from "@components/react/StackedAreaChart";
+import Hero from "@components/Hero.astro";
+import ChartTitle from "@components/ChartTitle.astro";
+---
+
+<Layout title="Astro Dashboard | React">
+  <Container>
+    <div class="mt-10">
+      <Hero>
+        Charts rendered with React, <a
+          href="https://react-composable-charts.netlify.app/"
+          >react-composable-charts</a
+        > and <a href="https://github.com/accurat/yogurt-layout"
+          >yogurt-layout</a
+        >
+      </Hero>
+    </div>
+    <div class="grid lg:grid-cols-2 grid-cols-1">
+      <div>
+        <ChartTitle>Scatterplot</ChartTitle>
+        <Scatterplot client:visible />
+      </div>
+      <div>
+        <ChartTitle>Stacked Area chart</ChartTitle>
+        <StackedAreaChart client:visible />
+      </div>
+    </div>
+  </Container>
+</Layout>

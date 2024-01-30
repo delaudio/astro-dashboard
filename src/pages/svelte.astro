@@ -1,0 +1,26 @@
+---
+import Container from "@components/Container.astro";
+import Layout from "@layouts/Layout.astro";
+import Barchart from "@components/svelte/Barchart.svelte";
+import Linechart from "@components/svelte/Linechart.svelte";
+import Hero from "@components/Hero.astro";
+import ChartTitle from "@components/ChartTitle.astro";
+---
+
+<Layout title="Astro Dashboard | Svelte">
+  <Container>
+    <div class="mt-10">
+      <Hero class="text-xl font-semibold">Charts rendered with Svelte</Hero>
+    </div>
+    <div class="grid lg:grid-cols-2 grid-cols-1">
+      <div>
+        <ChartTitle>Bar chart</ChartTitle>
+        <Barchart client:visible />
+      </div>
+      <div>
+        <ChartTitle>Line chart</ChartTitle>
+        <Linechart client:visible />
+      </div>
+    </div>
+  </Container>
+</Layout>

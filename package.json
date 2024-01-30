@@ -1,0 +1,50 @@
+{
+  "name": "astro-dashboard",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "knip": "knip"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/mdx": "^2.1.1",
+    "@astrojs/react": "^3.0.9",
+    "@astrojs/svelte": "^5.0.3",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/inter": "^5.0.16",
+    "@nextui-org/react": "^2.2.9",
+    "@tailwindcss/typography": "^0.5.10",
+    "alpinejs": "^3.13.3",
+    "astro": "^4.2.6",
+    "astro-htmx": "^1.0.5",
+    "astro-navbar": "^2.3.0",
+    "d3": "^7.8.5",
+    "d3-ease": "^3.0.1",
+    "d3-scale": "^4.0.2",
+    "d3-selection": "^3.0.0",
+    "d3-shape": "^3.2.0",
+    "d3-transition": "^3.0.1",
+    "framer-motion": "^11.0.3",
+    "htmx.org": "^1.9.10",
+    "leva": "^0.9.35",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-composable-charts": "^0.1.3",
+    "react-dom": "^18.2.0",
+    "svelte": "^4.2.9",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "yogurt-layout": "^0.0.5"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "knip": "^3.13.2"
+  }
+}

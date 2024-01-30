@@ -1,0 +1,48 @@
+---
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro dashboard description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col min-h-screen items-center">
+    <Navbar />
+    <main class="flex-1 w-full max-w-4xl">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+  <style is:global>
+    html,
+    body {
+      height: 100%;
+    }
+    html {
+      background: #fff;
+    }
+    a {
+      @apply hover:text-link hover:underline;
+    }
+    button {
+      @apply px-2 py-1 rounded-xl border border-black bg-white text-black hover:bg-black hover:text-white;
+    }
+    .content {
+      @apply [&>p]:mb-4 [&>ol]:mb-4 [&>li]:my-4 [&>h2]:font-semibold;
+      @apply [&>h3]:font-semibold [&>h2]:text-2xl [&>h2]:mb-5 [&>h3]:text-xl [&>h3]:my-2;
+    }
+  </style>
+</html>

@@ -1,0 +1,15 @@
+---
+import Container from "@components/Container.astro";
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero.astro";
+---
+
+<Layout title="Astro Dashboard">
+  <Container>
+    <div class="mt-10">
+      <Hero>Astro dashboard POC with multi-framework components</Hero>
+      <div hx-get="/partials/content/intro" hx-trigger="load" class="content">
+      </div>
+    </div>
+  </Container>
+</Layout>

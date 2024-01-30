@@ -1,0 +1,37 @@
+---
+import Container from "./Container.astro";
+
+const footerItems = [
+  {
+    title: "project repository",
+    path: "https://github.com/delaudio/astro-dashboard",
+  },
+];
+---
+
+<Container class="w-full max-w-4xl">
+  <footer class="text-black py-2 border-t border-black">
+    <div class="grid grid-cols-2 w-full">
+      <div class="w-full">
+        <p>
+          made by <a href="https://github.com/delaudio">federico del gaudio</a> | {
+            new Date().getFullYear()
+          }
+        </p>
+      </div>
+      <ul class="w-full text-right flex gap-5 justify-end">
+        {
+          footerItems.map((e) => {
+            return (
+              <li>
+                <a href={e.path} class="p-0 m-0">
+                  {e.title}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </footer>
+</Container>

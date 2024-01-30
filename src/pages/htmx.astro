@@ -1,0 +1,27 @@
+---
+import Container from "@components/Container.astro";
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero.astro";
+import ChartTitle from "@components/ChartTitle.astro";
+---
+
+<Layout title="Astro Dashboard | HTMX">
+  <Container>
+    <div class="mt-10">
+      <Hero class="text-xl font-semibold">Charts loaded with HTMX</Hero>
+    </div>
+    <div class="grid grid-cols-2">
+      <div>
+        <ChartTitle>
+          Alluvial chart exported from <a href="https://www.rawgraphs.io/"
+            >Rawgraphs</a>
+        </ChartTitle>
+        <div hx-get="/partials/charts/alluvial" hx-trigger="load"></div>
+      </div>
+    </div>
+  </Container>
+</Layout>
+
+<script>
+  import "htmx.org";
+</script>
