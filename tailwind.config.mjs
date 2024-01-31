@@ -1,13 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-const { nextui } = require("@nextui-org/react");
 const typography = require("@tailwindcss/typography");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 export default {
-  content: [
-    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       fontFamily: {
@@ -19,7 +15,7 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: [nextui(), typography()],
+  plugins: [typography()],
   image: {
     domains: ["astro.build"],
   },
