@@ -3,6 +3,7 @@ import Container from "@components/Container.astro";
 import Layout from "@layouts/Layout.astro";
 import Scatterplot from "@components/react/Scatterplot";
 import StackedAreaChart from "@components/react/StackedAreaChart";
+import StackedBarchart from "@components/react/StackedBarchart";
 import Hero from "@components/Hero.astro";
 import ChartTitle from "@components/ChartTitle.astro";
 ---
@@ -19,7 +20,7 @@ import ChartTitle from "@components/ChartTitle.astro";
         >
       </Hero>
     </div>
-    <div class="grid lg:grid-cols-2 grid-cols-1">
+    <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
       <div>
         <ChartTitle>Scatterplot</ChartTitle>
         <Scatterplot client:visible />
@@ -27,6 +28,10 @@ import ChartTitle from "@components/ChartTitle.astro";
       <div>
         <ChartTitle>Stacked Area chart</ChartTitle>
         <StackedAreaChart client:visible />
+      </div>
+      <div>
+        <ChartTitle>Stacked Barchart</ChartTitle>
+        <StackedBarchart client:visible />
       </div>
     </div>
   </Container>
