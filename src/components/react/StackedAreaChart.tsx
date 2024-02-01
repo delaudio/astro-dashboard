@@ -35,8 +35,8 @@ export default function StackedAreaChart() {
   const [dataset, setDataset] = useState(genData());
   const [debug, setDebug] = useState(false);
 
-  const width = 440;
-  const height = 440;
+  const width = 380;
+  const height = 380;
 
   const layout = makeLayout({
     id: "root",

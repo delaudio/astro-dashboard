@@ -28,8 +28,8 @@ const genData = () => {
 
 export default function StackedBarchart() {
   const [dataset, setDataset] = useState(genData());
-  const width = 440;
-  const height = 440;
+  const width = 380;
+  const height = 380;
   const padding = 40;
 
   const categories = ["Cat 1", "Cat 2", "Cat 3"];

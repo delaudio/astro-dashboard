@@ -37,8 +37,8 @@ export default function Scatterplot() {
 
   const layout = makeLayout({
     id: "root",
-    width: 440,
-    height: 440,
+    width: 380,
+    height: 380,
     padding: 40,
     children: [{ id: "chart" }]
   });

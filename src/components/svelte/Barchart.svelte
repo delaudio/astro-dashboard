@@ -23,8 +23,8 @@
 
   $: data = genData();
 
-  const width = 440;
-  const height = 400;
+  const width = 380;
+  const height = 380;
 
   const margin = { top: 20, right: 20, bottom: 20, left: 80 };
   const innerHeight = height - margin.top - margin.bottom;
